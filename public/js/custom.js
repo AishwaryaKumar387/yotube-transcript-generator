@@ -119,10 +119,9 @@ document.querySelector(".transcript-yt-video-link").addEventListener("submit", a
     }
 
     const data = await response.json();
-
+    console.log(data)
     if (data.message === "success") {
-      let videoInfo = data.data.videoInfo;
-      let html = data.data.html;
+      let html = data.transcriptHtml;
 
       // Insert the HTML content before the .yt-own-features div
       const targetElement = document.querySelector('.yt-own-features');
